@@ -35,12 +35,12 @@ def get_hexa_number():
 
 def convert_number_list(number):
     # convert hexadecimal to string list
-    numbers = [0] * len(number)
+    array = [0] * len(number)
     for i in range(len(number)):
-        numbers[i] = number[i]
-    return numbers
+        array[i] = number[i]
+    return array
 
-def manage_functions():
+def main():
     # 1) get number as string from user
     hexa_number = get_hexa_number()
     # 2) convert this string to list
@@ -53,4 +53,4 @@ def manage_functions():
 
 
 if __name__ == "__main__":
-    manage_functions()
+    main()
