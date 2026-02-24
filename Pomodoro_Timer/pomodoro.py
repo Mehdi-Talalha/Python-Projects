@@ -9,8 +9,8 @@ print(Fore.YELLOW + "======== Pomodoro Timer  ========")
 print(Fore.YELLOW + "=================================\n")
 
 # Input section long
-user = int(input(Fore.GREEN + "⏳ How many minutes do you want to work?: "))
-seconds = user * 60
+menutes = int(input(Fore.GREEN + "⏳ How many minutes do you want to work?: "))
+seconds = menutes * 60
 bar_length = 20
 
 # to bo honest i found it defiult chatGPT how made it for me 
