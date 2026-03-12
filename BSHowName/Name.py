@@ -1,6 +1,6 @@
 import random, time, sys, string
 
-strings = list(char for char in string.printable if char not in set(string.whitespace) and char not in set(string.punctuation))
+strings = list(char for char in string.printable if char not in set(string.digits) and char not in set(string.punctuation))
 
 try:
     # get the user name
@@ -17,7 +17,7 @@ try:
         while char != i:
             char = random.choice(strings)
             print(memory + char) 
-            time.sleep(0.1) 
+            time.sleep(0.01)
         memory = memory + i
 
 except KeyboardInterrupt:
