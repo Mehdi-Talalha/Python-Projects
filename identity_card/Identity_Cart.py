@@ -22,3 +22,4 @@ print(f"|| {Fore.YELLOW}Address       :{Style.RESET_ALL} {address:<37}||")
 print(f"|| {Fore.YELLOW}Job           :{Style.RESET_ALL} {job:<37}||")
 print(f"||{'':<40}{name:<13}||")
 print("=" * 58)
+   
