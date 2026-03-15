@@ -1,23 +1,40 @@
-import random
+# this is Rocj Paper Scissor game 
+import random, sys
 
-imogies = {
-    'r' : "🪨",
-    'p' : "📄",
-    's' : "✂️"
+choices = {
+    "R":"Rock",
+    "P":"Paper",
+    "S":"Scissor"
 }
 
-choices = ['r', 's', 'p']
+choice = list(choices.keys())
 
-while True:
-    computer = random.choice(choices)
+# these variables keep track of the number of wins, losses and ties.
+wins = 0
+losses = 0
+ties = 0
 
-    user = input("Enter (r/p/s): ")
-    if user not in choices:
-        print("Invalide input")
+print("ROCK, PAPER, SCISSORS")
 
-    if computer == user:
-        print("tie")
-    elif user == 'r' and computer == 's' or user == 's' and computer == 'p' or user == 'p' and computer == 'r':
-        print(f"The player WIN {imogies[user]}  > {imogies[computer]}")
+while True: # the main game loop
+    
+    print("%s Wins, %s Losses, %s Ties" % (wins, losses, ties))
+    
+
+    computerChoice = random.choice(choice).upper()
+
+    print("Enter your move: (R)ock (P)aper (S)cossprs or (Q)uit.")
+    playerChoice = input("> ").upper()
+    print(f"> {computerChoice}")
+
+    if playerChoice == computerChoice:
+        print("It is a Tie!")
+        ties+=1
+    elif (playerChoice == 'R' and computerChoice == 'S') or (playerChoice == 'S' and computerChoice == 'P') or (playerChoice == 'P' and computerChoice == 'R'):
+        print("The player wins:)")
+        wins+=1
+    elif playerChoice == 'Q':
+        sys.exit()
     else:
-        print(f"The computer win {imogies[computer]}  > {imogies[user]}")
+        print("The computer wins:(")
+        losses+=1
