@@ -1,1 +1,3 @@
-print(max(1, ))
+import math
+
+print(math.pow(2, -3))
